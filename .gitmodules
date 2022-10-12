@@ -1,0 +1,4 @@
+[submodule "l4d2-sdk"]
+	path = l4d2-sdk
+	url = https://github.com/alliedmodders/hl2sdk.git
+	branch = l4d2

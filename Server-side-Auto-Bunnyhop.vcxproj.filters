@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="udis86">
+      <UniqueIdentifier>{79c9f28c-0567-4057-b4f0-88cfb577e567}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="autobhop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="detours_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="udis86\src\decode.c">
+      <Filter>udis86</Filter>
+    </ClCompile>
+    <ClCompile Include="udis86\src\itab.c">
+      <Filter>udis86</Filter>
+    </ClCompile>
+    <ClCompile Include="udis86\src\syn.c">
+      <Filter>udis86</Filter>
+    </ClCompile>
+    <ClCompile Include="udis86\src\syn-att.c">
+      <Filter>udis86</Filter>
+    </ClCompile>
+    <ClCompile Include="udis86\src\syn-intel.c">
+      <Filter>udis86</Filter>
+    </ClCompile>
+    <ClCompile Include="udis86\src\udis86.c">
+      <Filter>udis86</Filter>
+    </ClCompile>
+    <ClCompile Include="recipientfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="usermessages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="autobhop.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="detours_api.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory_utils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hashtable.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="recipientfilter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usermessages.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
