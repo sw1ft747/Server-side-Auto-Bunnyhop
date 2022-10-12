@@ -1,17 +1,39 @@
 # Server-side Auto Bunnyhop for Left 4 Dead 2
-Works only on Listen/Dedicated Server that uses Auto Bunnyhop
+This plugin works both on server and client (to remove shaky and laggy effect when you bunnyhop) side, but it requires a server (listen or dedicated whatever) to run this plugin, otherwise auto bunnyhop won't work.
 
-# Server Plugin
-Download **autobhop.dll** and **autobhop.vdf** files and place them in *left4dead2/addons/* folder
+Note: this is Valve Server Plugin which is safely use, it doesn't require any injectors or some other magic.
 
-There's console variable **sv_autobunnyhopping** which allows you to enable and disable Auto Bunnyhop (default value is *1*)
+# Installation
+First, download the DLL from Releases and move it to the folder `Left 4 Dead 2/left4dead2/`, then launch the game with launch parameter `-insecure`.
 
-# Injectable Module
-Download appropriate **autobhop.dll** file and inject it using any DLL Injector
+Type the following command in the console: `plugin_load autobhop`.
 
-I added a beep sound to notify about the module's status. One beep - successful activation/deactivation of bunnyhop, two - unsuccessful
+The game will load the plugin and you will see green message about successful load (otherwise, red).
 
-Hold key **END** for a bit to disable Auto Bunnyhop and unload module
+### Auto Load
+To do not bother with manual loading you can tell the game to load the plugin automatically.
 
-# Clients
-If client will use Auto Bunnyhop on Listen/Dedicated Server then it will work the same as on server (no shaky)
+Go to this folder `Left 4 Dead 2/left4dead2/addons/` and create file with such name `autobhop.vdf`.
+
+Then, copy and paste the following text to the file and save it.
+
+```
+"Plugin"
+{
+	"file"	"autobhop"
+}
+```
+
+Now launch the game (with launch parameter `-insecure` ofc), the plugin will be loaded automatically.
+
+# Server Part
+The server part of plugin provides the bunnyhop and controls what client can use it.
+
+To disable or enable auto bunnyhop for everyone, use the following console variable (enabled by default): `sv_autobunnyhop <0/1>`
+
+# Client Part
+The client part of plugin uses a bridge (user messages and client commands) with server to make it possible to toggle auto bunnyhop.
+
+**The most important feature: if you will play on server that has this plugin, you won't see the shaky and laggy effect during bunnyhopping**.
+
+To disable or enable auto bunnyhop for yourself, use the following console command (console won't hint it because it's server-side): `cl_autobunnyhop` (you can also pass additional argument `1` or `0` to force auto bunnyhop be enabled/disabled, i.e. `cl_autobunnyhop 1`)
